@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- add a small button -->
+<div class="d-flex justify-content-center">
+    <a href="{{ url_for('add') }}" class="btn btn-primary btn-sm">Add a Message</a>
+</div>
+{% for post in posts %}
+
+<div style="message">
+
+    <strong>{{ post[3] }}</strong>
+    <p>{{ post[2]}}</p>
+    <p>{{ post[4]}}</p>
+    <p>{{ post[1]}}</p>
+    </br>
+</div>
+
+
+{% endfor %}
+
+<!-- 
+    3       author
+    4       content
+    1       created
+    2       title
+    
+-->
+
+{% endblock %}

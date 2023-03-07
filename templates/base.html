@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <style>
+        .rounded-circle {
+            border-radius: 50%;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="d-flex flex-column justify-content-center align-items-center ">
+        <header>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <img src="{{ url_for('static', filename='image.png') }}" alt="image" class="rounded-circle" width="200"
+                    height="200">
+                <p class="mt-3">IN LOVING MEMORY OF</p></br>
+                <h1 class="mb-0">KRISHNA CHHETRI</h1>
+            </div>
+
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+        </footer>
+
+    </div>
+</body>
+
+</html>
